@@ -1,0 +1,213 @@
+* { margin: 0; padding: 0; }
+body {
+    /* display: flex; */
+    height: 120vh;
+    /* overflow: hidden; */
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+    width: 50%;
+    /* border: 3px dashed blue; */
+    margin: auto;
+    margin-top: 300px;
+}
+
+.message {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    color: blueviolet;
+    flex-direction: column;
+}
+.message .text {
+    display: flex;
+}
+.message .emoji { text-align: center; }
+.message-alphabet { font-size: 3rem }
+
+.book {
+    /* border: 3px dashed red; */
+    position: relative;
+    perspective: 900;
+    -webkit-perspective: 900;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+.book .page {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    border: 3px solid white;
+    /* background-color: brown; */
+    left: -60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; */
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    perspective: 900;
+    -webkit-perspective: 900;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.picture-caption {
+    font-weight: bold;
+    background-color: #104c6269;
+    width: 100%;
+    color: mintcream;
+    text-align: center; 
+}
+
+
+.book .page .page-side {
+    /* backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; */
+    position: absolute;
+    color: gray;
+}
+.book .page .page-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(1px);
+    transform: rotateY(-180deg);
+    /* border: 3px solid gray; */
+}
+.book .page .page-front {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* border: 3px solid gray; */
+}
+
+.book .page .page-side {
+    width: 100%;
+    height: 100%;
+    /* border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; */
+    /* border: 3px solid rgb(105, 163, 186); */
+}
+.book .page1 .page-front {
+    background: url('../public/media/cover.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100%;
+    height: 100%; */
+    /* border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; */
+    /* border: 3px solid rgb(105, 163, 186); */
+}
+.book .page1 .page-back {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    background: url('../public/media/photo1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(1, 40, 87);
+    font-size: 1.5rem;
+}
+.book .page2 .page-front {
+    background: url('../public/media/intro.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.book .page2 .page-back {
+    background: url('../public/media/photo3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.book .page3 .page-front {
+    background: url('../public/media/photo4.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: end;
+    
+}
+.book .page3 .page-back {
+    background: url('../public/media/photo5.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: end;
+}
+
+.book .page4 .page-front {
+    background: url('../public/media/photo6.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.book .page4 .page-back {
+    background: url('../public/media/photo13.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.book .page5 .page-front {
+    background: url('../public/media/photo14.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+
+.book .page5 .page-back {
+    background: url('../public/media/photo15.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.book .page6 .page-front {
+    background: url('../public/media/photo11.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+
+.book .page6 .page-back {
+    background: url('../public/media/photo7.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+.book .page7 .page-front {
+    background: url('../public/media/photo16.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.book .page7 .page-back {
+    background: url('../public/media/seeya.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

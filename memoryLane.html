@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test3</title>
+
+    <!-- Bootswatch sketchy theme -->
+    <link rel="stylesheet" href="./styles/bootstrap.sketchy.min.css">
+ 
+    <link rel="stylesheet" href="./styles/memoryLane.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./scripts/memoryLane.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <div class="text">
+                <h2 class="message-alphabet">S</h2>
+                <h2 class="message-alphabet">c</h2>
+                <h2 class="message-alphabet">r</h2>
+                <h2 class="message-alphabet">o</h2>
+                <h2 class="message-alphabet">l</h2>
+                <h2 class="message-alphabet">l</h2>
+                <h2 class="message-alphabet">D</h2>
+                <h2 class="message-alphabet">o</h2>
+                <h2 class="message-alphabet">w</h2>
+                <h2 class="message-alphabet">n</h2>
+            </div>
+            <div class="emoji">
+                <svg style="position: relative" class="thumb" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="book">
+            <div class="page page1">
+                <div class="page-side page-front">
+                    
+                </div>
+                <div class="page-side page-back">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center;">What about a little music?</section>
+                    <section class="buttons-section">
+                        <audio id="myAudio" src="./public/media/song.mp3" preload="auto">
+                        </audio>
+                        <button id="playpausebtn" style="border-radius: 40%;" class="btn btn-success" onClick="togglePlay()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                                <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                            </svg>
+                        </button>
+                        <button style="border-radius: 40%" id="restartbtn" class="btn btn-info" onclick="restart()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                              </svg>
+                        </button>
+                    </section>
+                </div>
+            </div>
+            <div class="page page2">
+                <div class="page-side page-front">
+                    <button onclick="zoom()" style="
+                        float: right;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgb(0, 0, 0, 0);
+                        background: url('./media/zoom.png');
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        ">
+                    </button>
+                </div>
+                <div class="page-side page-back">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-top: 5px">Our <b><font color="magenta">trip</font></b> to science city</section>
+                </div>
+            </div>
+            <div class="page page3">
+                <div class="page-side page-front">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-bottom: 5px">Remember how much you <b><font color="#00c388">liked</font></b> that Kaleidoscope</section>
+                </div>
+                <div class="page-side page-back">
+                    <section class="picture-caption" style="margin-bottom: 10px">Probably our <b><font color="#b20062 ">best</font></b> picture?</section>
+                </div>
+            </div>
+            <div class="page page4">
+                <div class="page-side page-front">
+                    <section style="margin-top: 5px" class="picture-caption">
+                        Or this <b><font color="#c8a100">one</font></b>?
+                    </section>
+                </div>
+                <div class="page-side page-back">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-top: 5px">Travel snaps are always memorable</section>
+                </div>
+            </div>
+            <div class="page page5">
+                <div class="page-side page-front">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-bottom: 5px">My favourite one as usual</section>
+                </div>
+                <div class="page-side page-back">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-top: 5px">My <b><font color="antiquewhite">goodness</font></b> 😳</section>
+                </div>
+            </div>
+            <div class="page page6">
+                <div class="page-side page-front">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-bottom: 5px">My <b><font color="#ecd300">goodness</font></b> 😳😳 (My favourite is just changed)</section>
+                </div>
+                <div class="page-side page-back">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-top: 5px"><b><font color="#922203">Heeeeeyyyyyy!</font></b></section>
+                </div>
+            </div>
+            <div class="page page7">
+                <div class="page-side page-front">
+                    <section style="font-weight: bold;background-color: #104c6269;width: 100%;color: mintcream;text-align: center; margin-top: 5px">Where is your home <b><font color="#002680">Little One?</font></b></section>
+                </div>
+                <div class="page-side page-back">
+                    
+                </div>
+            </div>
+        </div>
+        <div style="
+            color: white;
+            font-size: 1.4rem;
+        " class="theend">
+            <section>I was never an artist with code. But you know that because of you, I have gone through so many changes in life that totally changed the course of my life for good. This is a little gratitude towards that. <b><font color="purple">Happy Birthday Love!</font></b></section>
+            <section style="
+                display: block;
+                text-align: right;
+                color: blueviolet;
+            ">- from<br>Nil</section>
+        </div>
+    </div>
+</body>
+</html>

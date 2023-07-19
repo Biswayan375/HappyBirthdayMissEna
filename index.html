@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <!-- Bootswatch sketchy theme -->
+    <link rel="stylesheet" href="./styles/bootstrap.sketchy.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    
+    <!-- jQuery and other JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+    <div id="cat" style="position: absolute; z-index: -1; visibility: hidden">😽</div>
+    <div class="main-container">
+        <div class="reply-container">
+            <section class="card reply hi">
+                <div class="sender-info">Mr. Nandi</div>
+                <div>The DAY has come</div>
+            </section>
+        </div>
+        <div class="reply-container">
+            <section class="card reply hi">
+                <div class="sender-info">Mr. Nandi</div>
+                <div>The Special Day I mean...its your Birthday!!! ✨</div>
+            </section>
+        </div>
+
+        <div class="msg-container">
+            <section class="card message hi">
+                <div class="sender-info">You</div>
+                <div>O I guess so...😏</div>
+            </section>
+        </div>
+
+        <div class="reply-container">
+            <section class="card reply hi">
+                <div class="sender-info">Mr. Nandi</div>
+                <div>Happy Birthday Love 💕</div>
+            </section>
+        </div>
+
+        <div class="msg-container">
+            <section class="card message hi">
+                <div class="sender-info">You</div>
+                <div>Thank You dear!!! 😘</div>
+            </section>
+        </div>
+
+        <div class="reply-container">
+            <section class="card reply hi">
+                <div class="sender-info">Mr. Nandi</div>
+                <div>I have a little surprise for you. So, shall we???</div>
+            </section>
+        </div>
+
+        <div class="msg-container">
+            <section class="card message hi">
+                <div class="sender-info">You</div>
+                <div>🤩🤩🤩</div>
+            </section>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href = 'memoryLane.html'" id="letsgobtn" class="btn btn-outline-success">Lets Go!!!</button>
+        <img id="magnet" style="transform: rotate(-90deg);" width="50px" src="./public/media/magnet.png" />
+    </div>
+</body>
+</html>
